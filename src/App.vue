@@ -1,31 +1,33 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <PokemonList class="poke-list" />
+    <PokemonDetails class="poke-window" />
   </div>
 </template>
 
+<script>
+import PokemonDetails from '@/views/PokemonDetails'
+import PokemonList from '@/views/PokemonList'
+
+export default {
+  components: {
+    PokemonDetails,
+    PokemonList
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+  #app {
+    display: grid;
+    grid-template-columns: 2fr;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  .poke-list {
+    grid-column: 1;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .poke-window {
+    grid-column: 2;
+  }
 </style>
