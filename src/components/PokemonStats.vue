@@ -1,7 +1,16 @@
 <template>
-  <div>
-    <p>{{ details.order }} - {{ details.name }}</p>
-  </div>
+  <table>
+    <tbody>
+      <tr>
+        <th>Number</th>
+        <td>{{ details.order }}</td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td>{{ details.name }}</td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <script>

@@ -12,3 +12,9 @@ export default {
   }
 }
 </script>
+
+<style>
+img {
+  height: 500px;
+}
+</style>

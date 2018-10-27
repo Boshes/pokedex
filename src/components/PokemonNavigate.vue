@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="navigation-buttons">
     <button class="previous" @click="pageNavigate('previous')">Back</button>
     <button class="next" @click="pageNavigate('next')">Next</button>
   </div>
@@ -15,4 +15,14 @@ export default {
 </script>
 
 <style>
+.navigation-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.previous {
+  grid-column: 1;
+}
+.next {
+  grid-column: 2;
+}
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div v-if="pokemon.length && Object.keys(chosenPokemon).length">
-    <table>
-      <PokemonNavigate @page-navigate="pageNavigate"/>
+    <ul class="poke-entries">
       <PokemonRow v-for="pokemon in pokemon" :key="pokemon.url" :pokemon="pokemon"/>
-    </table>
+    </ul>
+    <PokemonNavigate @page-navigate="pageNavigate"/>
   </div>
 </template>
 
@@ -46,3 +46,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.poke-entries {
+  font-size: 28px;
+  list-style-type: none;
+  max-height: 500px;
+  overflow-y: scroll;
+  padding: 0;
+}
+</style>
